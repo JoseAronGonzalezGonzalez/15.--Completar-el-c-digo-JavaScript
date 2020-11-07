@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+        <title>Ejercicio 15 - Información sobre eventos</title>
+        <style type="text/css">
+            body {
+                font-family: arial, helvetica;
+            }
+            #info {
+                width: 160px;
+                border: thin solid silver;
+                padding: 0.5em;
+                text-align: left;
+            }
+            #info h1 {
+                margin: 0;
+            }
+        </style>
+        <script type="text/javascript">
+
+            function getRandomColor() {
+              var letters = '0123456789ABCDEF';
+              var color = '#';
+              for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+              }
+              return color;
+            }
+
+            function muestraInformacion(e) {
+                if (e.type == "mousemove") {
+                    var div = document.getElementById('info');
+                    var string = "<h1> Raton </h1>";
+                    string+= "<p> navegador ["+e.screenX+","+e.screenY+"]</p>";
+                    string+= "<p> pagina ["+e.clientX+","+e.clientY+"]</p>";
+                    div.style.backgroundColor = 'white';
+                    div.innerHTML = string;
+                }
+                if (e.type == "keypress") {
+
+                    var div2 = document.getElementById('info');
+                    var string = "<h1> Teclado </h1>";
+
+                    string+= "<p> caracter ["+e.key+"]</p>";
+                    string+= "<p> codigo ["+e.charCode+"]</p>";
+
+                    div2.style.backgroundColor = getRandomColor();
+                    div2.innerHTML = string;
+                }
+                if (e.type == "click") {
+                    document.getElementById('info').style.backgroundColor = '#FFFFCC';
+                }
+            }
+        </script>
+    </head>
+    <body onmousemove="muestraInformacion(event)" onkeypress="muestraInformacion(event)" onclick="muestraInformacion(event)">
+        <div id="info" >
+            <h1> Raton </h1>
+            <p> navegador [0,0]</p>
+             <p> pagina [0,0]</p>
+        </div>
+         <!-- <div id="info2">
+            <h1> Teclado</h1>
+            <p> caracter</p>
+            <p> codigo</p>
+        </div> -->
+        
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br /> 
+    </body>
+</html>
